@@ -46,6 +46,24 @@ public class LinkedList {
 		}
 	}
 
+	public void printReverse() {
+		Node curr = head;
+		int countDown = count;
+		int countUp = 1;
+		while (countDown > 0) {
+			curr = head;
+			countUp = 1;
+			while (countUp <= countDown) {
+				curr = curr.next;
+				countUp++;
+			}
+			System.out.println(curr.value);
+			System.out.println("->");
+
+			countDown--;
+		}
+	}
+
 	public void printAllNodes() {
 		System.out.println("Head ->");
 		Node curr = head;
